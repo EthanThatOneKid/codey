@@ -1,764 +1,763 @@
-_FULLSCREEN
-DIM Username AS STRING
-DIM Imput AS STRING
+_FullScreen
+Dim Username As String
 
-INPUT "Hello, my name is Codey. What is yours?   ", Username
-CLS
-PRINT "Well, hello then, "; Username
+Input "Hello, my name is Codey. What is yours?   ", Username
+Cls
+Print "Well, hello then, "; Username
 
 ORIGINAL:
-CLS
-COLOR 3:
-PRINT "   _________                "
-PRINT "  /         \      ______   "
-PRINT " /   Press   \    /      \  "
-PRINT "|   Spacebar  |  |        | "
-PRINT "|   to see    |  |  0  0  | "
-PRINT " \ my options/   |   __   | "
-PRINT "  \_________/     \______/  "
-COLOR 31: PRINT "Press the Spacebar to see my options..."
-COLOR 18: PRINT "Press Esc to end the program..."
-DO
-    DO: K$ = UCASE$(INKEY$)
-    LOOP UNTIL K$ = CHR$(63) OR K$ = CHR$(32)
-    IF K$ = CHR$(27) THEN END
-    IF K$ = CHR$(32) THEN GOTO OPTIONS:
-LOOP
+Cls
+Color 3:
+Print "   _________                "
+Print "  /         \      ______   "
+Print " /   Press   \    /      \  "
+Print "|   Spacebar  |  |        | "
+Print "|   to see    |  |  0  0  | "
+Print " \ my options/   |   __   | "
+Print "  \_________/     \______/  "
+Color 31: Print "Press the Spacebar to see my options..."
+Color 18: Print "Press Esc to end the program..."
+Do
+    Do: K$ = UCase$(InKey$)
+    Loop Until K$ = Chr$(63) Or K$ = Chr$(32)
+    If K$ = Chr$(27) Then End
+    If K$ = Chr$(32) Then GoTo OPTIONS:
+Loop
 
 OPTIONS:
-CLS
-COLOR 15:
-PRINT "   _________                "
-PRINT "  /         \      ______   "
-PRINT " /   These   \    /      \  "
-PRINT "|     are     |  |        | "
-PRINT "|  my options |  |  0  0  | "
-PRINT " \           /   |   __   | "
-PRINT "  \_________/     \______/  "
-PRINT "Pick an option, "; Username
-PRINT "It is currenty"
-PRINT Clock$
-PRINT DATE$
-PRINT
-PRINT
-COLOR 9: PRINT "Key 'P' to play on my digital arcade..."
-PRINT
-COLOR 10: PRINT "Key 'C' to use the calculator..."
-PRINT
-COLOR 14: PRINT "Key 'S' to use soundboard..."
-PRINT
-COLOR 13: PRINT "Key 'G' to use graph..."
-PRINT
-COLOR 11: PRINT "Press the spacebar to talk with me..."
-PRINT
-COLOR 4: PRINT "Key Esc to end program..."
-DO
-    DO: K$ = UCASE$(INKEY$)
-    LOOP UNTIL K$ = "O" OR K$ = "E" OR K$ = "P" OR K$ = "C" OR K$ = "S" OR K$ = "G" OR K$ = CHR$(27) OR K$ = CHR$(32)
+Cls
+Color 15:
+Print "   _________                "
+Print "  /         \      ______   "
+Print " /   These   \    /      \  "
+Print "|     are     |  |        | "
+Print "|  my options |  |  0  0  | "
+Print " \           /   |   __   | "
+Print "  \_________/     \______/  "
+Print "Pick an option, "; Username
+Print "It is currenty"
+Print Clock$
+Print Date$
+Print
+Print
+Color 9: Print "Key 'P' to play on my digital arcade..."
+Print
+Color 10: Print "Key 'C' to use the calculator..."
+Print
+Color 14: Print "Key 'S' to use soundboard..."
+Print
+Color 13: Print "Key 'G' to use graph..."
+Print
+Color 11: Print "Press the spacebar to talk with me..."
+Print
+Color 4: Print "Key Esc to end program..."
+Do
+    Do: K$ = UCase$(InKey$)
+    Loop Until K$ = "O" Or K$ = "E" Or K$ = "P" Or K$ = "C" Or K$ = "S" Or K$ = "G" Or K$ = Chr$(27) Or K$ = Chr$(32)
 
-    IF K$ = CHR$(27) THEN END
-    IF K$ = "O" THEN GOTO OPTIONS:
-    IF K$ = "P" THEN GOTO Gamesmenu:
-    IF K$ = "C" THEN GOTO Calculator:
-    IF K$ = "S" THEN GOTO Soundboard:
-    IF K$ = CHR$(27) THEN END
-    IF K$ = "G" THEN GOTO Graph:
-    IF K$ = CHR$(32) THEN GOTO Conversation:
-LOOP
+    If K$ = Chr$(27) Then End
+    If K$ = "O" Then GoTo OPTIONS:
+    If K$ = "P" Then GoTo Gamesmenu:
+    If K$ = "C" Then GoTo Calculator:
+    If K$ = "S" Then GoTo Soundboard:
+    If K$ = Chr$(27) Then End
+    If K$ = "G" Then GoTo Graph:
+    If K$ = Chr$(32) Then GoTo Conversation:
+Loop
 
 Calculator:
-5 CLS
-PRINT "1) ADD"
-PRINT "2) MULTIPLY"
-PRINT "3) DIVIDE"
-PRINT "4) SQUARE ROOT"
-PRINT "5) EXIT"
-INPUT I
-IF I = 1 GOTO 10
-IF I = 2 GOTO 20
-IF I = 3 GOTO 30
-IF I = 4 GOTO 40
-IF I = 5 GOTO 50
-END
-10 CLS: PRINT "INPUT NUMBER"
-INPUT A
-CLS
-PRINT "INPUT NEXT NUMBER"
-INPUT B
-CLS
-PRINT A + B
-PRINT "PRESS SPACE TO RUN"
-SLEEP 0
-PRINT "Continue calculating, "; Username
-PRINT "Y/N"
-IF K$ = "Y" THEN GOTO 5
-IF K$ = "N" THEN GOTO OPTIONS:
+5 Cls
+Print "1) ADD"
+Print "2) MULTIPLY"
+Print "3) DIVIDE"
+Print "4) SQUARE ROOT"
+Print "5) EXIT"
+Input I
+If I = 1 GoTo 10
+If I = 2 GoTo 20
+If I = 3 GoTo 30
+If I = 4 GoTo 40
+If I = 5 GoTo 50
+End
+10 Cls: Print "INPUT NUMBER"
+Input A
+Cls
+Print "INPUT NEXT NUMBER"
+Input B
+Cls
+Print A + B
+Print "PRESS SPACE TO RUN"
+Sleep 0
+Print "Continue calculating, "; Username
+Print "Y/N"
+If K$ = "Y" Then GoTo 5
+If K$ = "N" Then GoTo OPTIONS:
 
-20 CLS: PRINT "INPUT NUMBER"
-INPUT C
-CLS
-PRINT "INPUT NEXT NUMBER"
-INPUT D
-CLS
-PRINT C * D
-PRINT "PRESS SPACE TO RUN"
-SLEEP 0
-PRINT "Continue calculating, "; Username
-PRINT "Y/N"
-IF K$ = "Y" THEN GOTO 5
-IF K$ = "N" THEN GOTO OPTIONS:
+20 Cls: Print "INPUT NUMBER"
+Input C
+Cls
+Print "INPUT NEXT NUMBER"
+Input D
+Cls
+Print C * D
+Print "PRESS SPACE TO RUN"
+Sleep 0
+Print "Continue calculating, "; Username
+Print "Y/N"
+If K$ = "Y" Then GoTo 5
+If K$ = "N" Then GoTo OPTIONS:
 
-30 CLS: PRINT "INPUT NUMBER"
-INPUT E
-CLS
-PRINT "INPUT NEXT NUMBER"
-INPUT F
-CLS
-PRINT E / F
-PRINT "PRESS SPACE TO RUN"
-SLEEP 0
-PRINT "Continue calculating, "; Username
-PRINT "Y/N"
-IF K$ = "Y" THEN GOTO 5
-IF K$ = "N" THEN GOTO OPTIONS:
+30 Cls: Print "INPUT NUMBER"
+Input E
+Cls
+Print "INPUT NEXT NUMBER"
+Input F
+Cls
+Print E / F
+Print "PRESS SPACE TO RUN"
+Sleep 0
+Print "Continue calculating, "; Username
+Print "Y/N"
+If K$ = "Y" Then GoTo 5
+If K$ = "N" Then GoTo OPTIONS:
 
-40 CLS: PRINT "INPUT NUMBER"
-INPUT G
-CLS
-PRINT SQR(G)
-PRINT "PRESS SPACE TO RUN"
-SLEEP 0
-PRINT "Continue calculating, "; Username
-PRINT "Y/N"
-IF K$ = "Y" THEN GOTO 5
-IF K$ = "N" THEN GOTO OPTIONS:
+40 Cls: Print "INPUT NUMBER"
+Input G
+Cls
+Print Sqr(G)
+Print "PRESS SPACE TO RUN"
+Sleep 0
+Print "Continue calculating, "; Username
+Print "Y/N"
+If K$ = "Y" Then GoTo 5
+If K$ = "N" Then GoTo OPTIONS:
 
-50 END
+50 End
 
 Soundboard:
-CLS
-COLOR 15:
-PRINT "Press A to play A note..."
-PRINT
-PRINT "Press B to play B note..."
-PRINT
-PRINT "Press C to play C note..."
-PRINT
-PRINT "Press D to play D note..."
-PRINT
-PRINT "Press E to play E note..."
-PRINT
-PRINT "Press F to play F note..."
-PRINT
-PRINT "Press G to play G note..."
-PRINT
-PRINT "Press Esc to exit Soundboard..."
-DO
-    DO: K$ = UCASE$(INKEY$)
-    LOOP UNTIL K$ = "A" OR K$ = "B" OR K$ = "C" OR K$ = "D" OR K$ = "E" OR K$ = "F" OR K$ = "G" OR K$ = CHR$(27)
-    PRINT K$
-    IF K$ = "E" THEN GOTO E:
-    IF K$ = "A" THEN GOTO A:
-    IF K$ = "B" THEN GOTO B:
-    IF K$ = "C" THEN GOTO C:
-    IF K$ = "D" THEN GOTO D:
-    IF K$ = "G" THEN GOTO G:
-    IF K$ = "F" THEN GOTO F:
-    IF K$ = CHR$(27) THEN GOTO OPTIONS:
-LOOP
+Cls
+Color 15:
+Print "Press A to play A note..."
+Print
+Print "Press B to play B note..."
+Print
+Print "Press C to play C note..."
+Print
+Print "Press D to play D note..."
+Print
+Print "Press E to play E note..."
+Print
+Print "Press F to play F note..."
+Print
+Print "Press G to play G note..."
+Print
+Print "Press Esc to exit Soundboard..."
+Do
+    Do: K$ = UCase$(InKey$)
+    Loop Until K$ = "A" Or K$ = "B" Or K$ = "C" Or K$ = "D" Or K$ = "E" Or K$ = "F" Or K$ = "G" Or K$ = Chr$(27)
+    Print K$
+    If K$ = "E" Then GoTo E:
+    If K$ = "A" Then GoTo A:
+    If K$ = "B" Then GoTo B:
+    If K$ = "C" Then GoTo C:
+    If K$ = "D" Then GoTo D:
+    If K$ = "G" Then GoTo G:
+    If K$ = "F" Then GoTo F:
+    If K$ = Chr$(27) Then GoTo OPTIONS:
+Loop
 E:
-CLS
-PLAY "E"
-GOTO Soundboard:
+Cls
+Play "E"
+GoTo Soundboard:
 A:
-CLS
-PLAY "A"
-GOTO Soundboard:
+Cls
+Play "A"
+GoTo Soundboard:
 B:
-CLS
-PLAY "B"
-GOTO Soundboard:
+Cls
+Play "B"
+GoTo Soundboard:
 C:
-CLS
-PLAY "C"
-GOTO Soundboard:
+Cls
+Play "C"
+GoTo Soundboard:
 D:
-CLS
-PLAY "D"
-GOTO Soundboard:
+Cls
+Play "D"
+GoTo Soundboard:
 G:
-CLS
-PLAY "G"
-GOTO Soundboard:
+Cls
+Play "G"
+GoTo Soundboard:
 F:
-CLS
-PLAY "F"
-GOTO Soundboard:
+Cls
+Play "F"
+GoTo Soundboard:
 
 Graph:
 
-SCREEN 0, 0, 0
-CLS
-WIDTH 40, 25
-COLOR 10: PRINT "The slope formula is y = m(x) +/- b."
-PRINT "Add(Positive) or Subtract(negative) m of first slope? A or S?"
-DO: K$ = UCASE$(INKEY$)
-LOOP UNTIL K$ = "A" OR K$ = "S"
-IF K$ = "A" THEN GOTO Add1:
-IF K$ = "S" THEN GOTO Subtract1:
+Screen 0, 0, 0
+Cls
+Width 40, 25
+Color 10: Print "The slope formula is y = m(x) +/- b."
+Print "Add(Positive) or Subtract(negative) m of first slope? A or S?"
+Do: K$ = UCase$(InKey$)
+Loop Until K$ = "A" Or K$ = "S"
+If K$ = "A" Then GoTo Add1:
+If K$ = "S" Then GoTo Subtract1:
 
 Add1:
-CLS
-COLOR 10: PRINT "The slope formula is y = m(x) +/- b."
-INPUT "Enter first term for m. ", m
-INPUT "Over? ", C
+Cls
+Color 10: Print "The slope formula is y = m(x) +/- b."
+Input "Enter first term for m. ", m
+Input "Over? ", C
 m2 = m / C
-GOTO start2:
+GoTo start2:
 
 Subtract1:
-CLS
-COLOR 10: PRINT "The slope formula is y = m(x) +/- b."
-INPUT "Enter first term for m. ", m
-INPUT "Over? ", D
+Cls
+Color 10: Print "The slope formula is y = m(x) +/- b."
+Input "Enter first term for m. ", m
+Input "Over? ", D
 rand3 = m / D
 m3 = rand3 * -1
-GOTO start3:
+GoTo start3:
 
 start2:
-CLS
-COLOR 10: PRINT "The slope formula is y = m(x) +/- b."
-PRINT "Add(Positive) or Subtract(negative) b of first slope? A or S?"
-DO: K$ = UCASE$(INKEY$)
-LOOP UNTIL K$ = "A" OR K$ = "S"
-IF K$ = "A" THEN GOTO Add2:
-IF K$ = "S" THEN GOTO Subtract2:
+Cls
+Color 10: Print "The slope formula is y = m(x) +/- b."
+Print "Add(Positive) or Subtract(negative) b of first slope? A or S?"
+Do: K$ = UCase$(InKey$)
+Loop Until K$ = "A" Or K$ = "S"
+If K$ = "A" Then GoTo Add2:
+If K$ = "S" Then GoTo Subtract2:
 
 start3:
-CLS
-COLOR 10: PRINT "The slope formula is y = m(x) +/- b."
-PRINT "Add(Positive) or Subtract(negative) b of first slope? A or S?"
-DO: K$ = UCASE$(INKEY$)
-LOOP UNTIL K$ = "A" OR K$ = "S"
-IF K$ = "A" THEN GOTO Add3:
-IF K$ = "S" THEN GOTO Subtract3:
+Cls
+Color 10: Print "The slope formula is y = m(x) +/- b."
+Print "Add(Positive) or Subtract(negative) b of first slope? A or S?"
+Do: K$ = UCase$(InKey$)
+Loop Until K$ = "A" Or K$ = "S"
+If K$ = "A" Then GoTo Add3:
+If K$ = "S" Then GoTo Subtract3:
 
 Add2:
-CLS
-COLOR 10: PRINT "The slope formula is y = m(x) +/- b."
-INPUT "Enter first term for b. ", B
+Cls
+Color 10: Print "The slope formula is y = m(x) +/- b."
+Input "Enter first term for b. ", B
 b2 = B
-GOTO Stats1:
+GoTo Stats1:
 
 Subtract2:
-CLS
-COLOR 10: PRINT "The slope formula is y = m(x) +/- b."
-INPUT "Enter first term for b. ", B
+Cls
+Color 10: Print "The slope formula is y = m(x) +/- b."
+Input "Enter first term for b. ", B
 b3 = B * -1
-GOTO Stats2:
+GoTo Stats2:
 
 Add3:
-CLS
-COLOR 10: PRINT "The slope formula is y = m(x) +/- b."
-INPUT "Enter first term for b. ", B
+Cls
+Color 10: Print "The slope formula is y = m(x) +/- b."
+Input "Enter first term for b. ", B
 b4 = B
-GOTO Stats3:
+GoTo Stats3:
 
 Subtract3:
-CLS
-COLOR 10: PRINT "The slope formula is y = m(x) +/- b."
-INPUT "Enter first term for b. ", B
+Cls
+Color 10: Print "The slope formula is y = m(x) +/- b."
+Input "Enter first term for b. ", B
 b5 = B * -1
-GOTO Stats4:
+GoTo Stats4:
 
 
 
 Stats1:
-CLS
-SCREEN 13
+Cls
+Screen 13
 size = 5
-WINDOW (-size, -size)-(size, size)
-LINE (-size, 0)-(size, 0), 15
-LINE (0, -size)-(0, size), 15
-FOR x = -size TO size
-    LINE (-size, x)-(size, x), 8
-    LINE (x, -size)-(x, size), 8
-NEXT x
-LINE (-size, 0)-(size, 0), 15
-LINE (0, -size)-(0, size), 15
-FOR x = -size TO size STEP .01
+Window (-size, -size)-(size, size)
+Line (-size, 0)-(size, 0), 15
+Line (0, -size)-(0, size), 15
+For x = -size To size
+    Line (-size, x)-(size, x), 8
+    Line (x, -size)-(x, size), 8
+Next x
+Line (-size, 0)-(size, 0), 15
+Line (0, -size)-(0, size), 15
+For x = -size To size Step .01
     y = x * m2 + b2
 
-    PSET (x, y), 13
+    PSet (x, y), 13
 
-    LOCATE 20, 1: PRINT "Y Intercept is "; B
-NEXT x
-GOTO again
+    Locate 20, 1: Print "Y Intercept is "; B
+Next x
+GoTo again
 Stats2:
-CLS
-SCREEN 13
+Cls
+Screen 13
 size = 5
-WINDOW (-size, -size)-(size, size)
-LINE (-size, 0)-(size, 0), 15
-LINE (0, -size)-(0, size), 15
-FOR x = -size TO size
-    LINE (-size, x)-(size, x), 8
-    LINE (x, -size)-(x, size), 8
-NEXT x
-LINE (-size, 0)-(size, 0), 15
-LINE (0, -size)-(0, size), 15
-FOR x = -size TO size STEP .01
+Window (-size, -size)-(size, size)
+Line (-size, 0)-(size, 0), 15
+Line (0, -size)-(0, size), 15
+For x = -size To size
+    Line (-size, x)-(size, x), 8
+    Line (x, -size)-(x, size), 8
+Next x
+Line (-size, 0)-(size, 0), 15
+Line (0, -size)-(0, size), 15
+For x = -size To size Step .01
     y = x * m2 + b3
 
-    PSET (x, y), 13
+    PSet (x, y), 13
 
-    LOCATE 20, 1: PRINT "Y Intercept is "; B
-NEXT x
-GOTO again
+    Locate 20, 1: Print "Y Intercept is "; B
+Next x
+GoTo again
 Stats3:
-CLS
-SCREEN 13
+Cls
+Screen 13
 size = 5
-WINDOW (-size, -size)-(size, size)
-LINE (-size, 0)-(size, 0), 15
-LINE (0, -size)-(0, size), 15
-FOR x = -size TO size
-    LINE (-size, x)-(size, x), 8
-    LINE (x, -size)-(x, size), 8
-NEXT x
-LINE (-size, 0)-(size, 0), 15
-LINE (0, -size)-(0, size), 15
-FOR x = -size TO size STEP .01
+Window (-size, -size)-(size, size)
+Line (-size, 0)-(size, 0), 15
+Line (0, -size)-(0, size), 15
+For x = -size To size
+    Line (-size, x)-(size, x), 8
+    Line (x, -size)-(x, size), 8
+Next x
+Line (-size, 0)-(size, 0), 15
+Line (0, -size)-(0, size), 15
+For x = -size To size Step .01
     y = x * m3 + b4
 
-    PSET (x, y), 13
+    PSet (x, y), 13
 
-    LOCATE 20, 1: PRINT "Y Intercept is "; B
-NEXT x
-GOTO again
+    Locate 20, 1: Print "Y Intercept is "; B
+Next x
+GoTo again
 Stats4:
-CLS
-SCREEN 13
+Cls
+Screen 13
 size = 5
-WINDOW (-size, -size)-(size, size)
-LINE (-size, 0)-(size, 0), 15
-LINE (0, -size)-(0, size), 15
-FOR x = -size TO size
-    LINE (-size, x)-(size, x), 8
-    LINE (x, -size)-(x, size), 8
-NEXT x
-LINE (-size, 0)-(size, 0), 15
-LINE (0, -size)-(0, size), 15
-FOR x = -size TO size STEP .01
+Window (-size, -size)-(size, size)
+Line (-size, 0)-(size, 0), 15
+Line (0, -size)-(0, size), 15
+For x = -size To size
+    Line (-size, x)-(size, x), 8
+    Line (x, -size)-(x, size), 8
+Next x
+Line (-size, 0)-(size, 0), 15
+Line (0, -size)-(0, size), 15
+For x = -size To size Step .01
     y = x * m3 + b5
 
-    PSET (x, y), 13
+    PSet (x, y), 13
 
-    LOCATE 20, 1: PRINT "Y Intercept is "; B
-NEXT x
-GOTO again:
+    Locate 20, 1: Print "Y Intercept is "; B
+Next x
+GoTo again:
 again:
-LOCATE 23, 1: PRINT "New graph? (Y/N)"
-DO
-    a$ = UCASE$(INKEY$)
-LOOP UNTIL a$ = "Y" OR a$ = "N"
-IF a$ = "Y" THEN GOTO Graph:
-IF a$ = "N" THEN
-    SCREEN 0, 0, 0:
-    WIDTH 80, 25
-    CLS
-END IF
-IF a$ = "N" GOTO OPTIONS:
-END
+Locate 23, 1: Print "New graph? (Y/N)"
+Do
+    a$ = UCase$(InKey$)
+Loop Until a$ = "Y" Or a$ = "N"
+If a$ = "Y" Then GoTo Graph:
+If a$ = "N" Then
+    Screen 0, 0, 0:
+    Width 80, 25
+    Cls
+End If
+If a$ = "N" GoTo OPTIONS:
+End
 
 Conversation:
-DIM UserInput AS STRING
-DO
-    COLOR 7:
-    PRINT "Press Esc to go to Codey's main menu at any time"
-    a$ = UCASE$(INKEY$)
-    INPUT "Type something for me to respond to.   ", UserInput
-    IF K$ = CHR$(27) THEN GOTO OPTIONS:
-    IF UserInput = "I WANNA BE THE VERY BEST" THEN
-        PRINT
-        PRINT "   _________                "
-        PRINT "  /         \      ______   "
-        PRINT " /   Like    \    /      \  "
-        PRINT "|   no one    |  |        | "
-        PRINT "|  ever was   |  |  0  0  | "
-        PRINT " \           /   |   __   | "
-        PRINT "  \_________/     \______/  "
-    END IF
-    IF UserInput = "TO CATCH THEM IS MY TEST" THEN
-        PRINT
-        PRINT "   _________                "
-        PRINT "  /         \      ______   "
-        PRINT " / To train  \    /      \  "
-        PRINT "|   them is   |  |        | "
-        PRINT "|  my cause   |  |  0  0  | "
-        PRINT " \           /   |   __   | "
-        PRINT "  \_________/     \______/  "
-    END IF
-    IF UserInput = "POKEMON" THEN
-        PRINT
-        PRINT "   _________                "
-        PRINT "  /         \      ______   "
-        PRINT " /   Gotta   \    /      \  "
-        PRINT "|   catchem   |  |        | "
-        PRINT "|     all     |  |  0  0  | "
-        PRINT " \           /   |   __   | "
-        PRINT "  \_________/     \______/  "
-    END IF
-    IF UserInput = "SLEEP" THEN
-        PRINT "It is already "
-        PRINT Clock$
-        PRINT "   _________                "
-        PRINT "  /         \      ______   "
-        PRINT " /   ZZZZZ   \    /      \  "
-        PRINT "|   ZZZZZZZ   |  |        | "
-        PRINT "|     ZZZ     |  |  -  -  | "
-        PRINT " \(goodnight)/   |   __   | "
-        PRINT "  \_________/     \______/  "
-        SOUND 200, 20
-        END
-    END IF
-    IF UserInput = "I WANT TO GO HOME" THEN GOTO OPTIONS:
-    IF UserInput = "HOME" THEN GOTO OPTIONS:
-    IF UserInput = "OPTIONS" THEN GOTO OPTIONS:
-    IF UserInput = "MENU" THEN GOTO OPTIONS:
-    IF UserInput = "GAMES" THEN GOTO Gamesmenu:
-    IF UserInput = "PLAY" THEN GOTO Gamesmenu:
-    IF UserInput = "CALCULATOR" THEN GOTO Calculator:
-    IF UserInput = "CALCULATE" THEN GOTO Calculator:
-    IF UserInput = "FART" THEN SOUND 100, 20
-    IF UserInput = "END" THEN END
-    IF UserInput = "END PROGRAM" THEN END
-    IF UserInput = "FAVORITE MOVIE" THEN
-        PRINT
-        PRINT "   _________                "
-        PRINT "  /         \      ______   "
-        PRINT " /           \    /      \  "
-        PRINT "|    Tron     |  |        | "
-        PRINT "|             |  |  0  0  | "
-        PRINT " \           /   |   __   | "
-        PRINT "  \_________/     \______/  "
-    END IF
-    IF UserInput = "FAVORITE FOOD" THEN
-        PRINT
-        PRINT "   _________                "
-        PRINT "  /         \      ______   "
-        PRINT " /           \    /      \  "
-        PRINT "|    Block    |  |        | "
-        PRINT "|    Bytes    |  |  0  0  | "
-        PRINT " \           /   |   __   | "
-        PRINT "  \_________/     \______/  "
-    END IF
-    IF UserInput = "NAME" THEN
-        PRINT "Your name is "; Username
-        PRINT "   _________                "
-        PRINT "  /         \      ______   "
-        PRINT " /     My    \    /      \  "
-        PRINT "|   name is   |  |        | "
-        PRINT "|    Codey    |  |  0  0  | "
-        PRINT " \           /   |   __   | "
-        PRINT "  \_________/     \______/  "
-    END IF
-    IF UserInput = "FAVORITE GAME" THEN
-        PRINT
-        PRINT "   _________                "
-        PRINT "  /         \      ______   "
-        PRINT " /     I     \    /      \  "
-        PRINT "|    like     |  |        | "
-        PRINT "|    Atari    |  |  0  0  | "
-        PRINT " \           /   |   __   | "
-        PRINT "  \_________/     \______/  "
-    END IF
-    IF UserInput = "GRAPH" THEN GOTO Graph:
-    IF UserInput = "TOWER TRIALS" THEN GOTO TowerTrials:
-    IF UserInput = "HOW ARE YOU" THEN PRINT "I am good, how are you, "; Username
-    IF UserInput = "DATE" THEN PRINT Clock$
-    IF UserInput = "TIME" THEN PRINT Clock$
-    IF UserInput = "CLOCK" THEN PRINT Clock$
-LOOP
+Dim UserInput As String
+Do
+    Color 7:
+    Print "Press Esc to go to Codey's main menu at any time"
+    a$ = UCase$(InKey$)
+    Input "Type something for me to respond to.   ", UserInput
+    If K$ = Chr$(27) Then GoTo OPTIONS:
+    If UserInput = "I WANNA BE THE VERY BEST" Then
+        Print
+        Print "   _________                "
+        Print "  /         \      ______   "
+        Print " /   Like    \    /      \  "
+        Print "|   no one    |  |        | "
+        Print "|  ever was   |  |  0  0  | "
+        Print " \           /   |   __   | "
+        Print "  \_________/     \______/  "
+    End If
+    If UserInput = "TO CATCH THEM IS MY TEST" Then
+        Print
+        Print "   _________                "
+        Print "  /         \      ______   "
+        Print " / To train  \    /      \  "
+        Print "|   them is   |  |        | "
+        Print "|  my cause   |  |  0  0  | "
+        Print " \           /   |   __   | "
+        Print "  \_________/     \______/  "
+    End If
+    If UserInput = "POKEMON" Then
+        Print
+        Print "   _________                "
+        Print "  /         \      ______   "
+        Print " /   Gotta   \    /      \  "
+        Print "|   catchem   |  |        | "
+        Print "|     all     |  |  0  0  | "
+        Print " \           /   |   __   | "
+        Print "  \_________/     \______/  "
+    End If
+    If UserInput = "SLEEP" Then
+        Print "It is already "
+        Print Clock$
+        Print "   _________                "
+        Print "  /         \      ______   "
+        Print " /   ZZZZZ   \    /      \  "
+        Print "|   ZZZZZZZ   |  |        | "
+        Print "|     ZZZ     |  |  -  -  | "
+        Print " \(goodnight)/   |   __   | "
+        Print "  \_________/     \______/  "
+        Sound 200, 20
+        End
+    End If
+    If UserInput = "I WANT TO GO HOME" Then GoTo OPTIONS:
+    If UserInput = "HOME" Then GoTo OPTIONS:
+    If UserInput = "OPTIONS" Then GoTo OPTIONS:
+    If UserInput = "MENU" Then GoTo OPTIONS:
+    If UserInput = "GAMES" Then GoTo Gamesmenu:
+    If UserInput = "PLAY" Then GoTo Gamesmenu:
+    If UserInput = "CALCULATOR" Then GoTo Calculator:
+    If UserInput = "CALCULATE" Then GoTo Calculator:
+    If UserInput = "FART" Then Sound 100, 20
+    If UserInput = "END" Then End
+    If UserInput = "END PROGRAM" Then End
+    If UserInput = "FAVORITE MOVIE" Then
+        Print
+        Print "   _________                "
+        Print "  /         \      ______   "
+        Print " /           \    /      \  "
+        Print "|    Tron     |  |        | "
+        Print "|             |  |  0  0  | "
+        Print " \           /   |   __   | "
+        Print "  \_________/     \______/  "
+    End If
+    If UserInput = "FAVORITE FOOD" Then
+        Print
+        Print "   _________                "
+        Print "  /         \      ______   "
+        Print " /           \    /      \  "
+        Print "|    Block    |  |        | "
+        Print "|    Bytes    |  |  0  0  | "
+        Print " \           /   |   __   | "
+        Print "  \_________/     \______/  "
+    End If
+    If UserInput = "NAME" Then
+        Print "Your name is "; Username
+        Print "   _________                "
+        Print "  /         \      ______   "
+        Print " /     My    \    /      \  "
+        Print "|   name is   |  |        | "
+        Print "|    Codey    |  |  0  0  | "
+        Print " \           /   |   __   | "
+        Print "  \_________/     \______/  "
+    End If
+    If UserInput = "FAVORITE GAME" Then
+        Print
+        Print "   _________                "
+        Print "  /         \      ______   "
+        Print " /     I     \    /      \  "
+        Print "|    like     |  |        | "
+        Print "|    Atari    |  |  0  0  | "
+        Print " \           /   |   __   | "
+        Print "  \_________/     \______/  "
+    End If
+    If UserInput = "GRAPH" Then GoTo Graph:
+    If UserInput = "TOWER TRIALS" Then GoTo TowerTrials:
+    If UserInput = "HOW ARE YOU" Then Print "I am good, how are you, "; Username
+    If UserInput = "DATE" Then Print Clock$
+    If UserInput = "TIME" Then Print Clock$
+    If UserInput = "CLOCK" Then Print Clock$
+Loop
 
 Gamesmenu:
-CLS
+Cls
 
-COLOR 31: LOCATE 2, 2: PRINT "This is my Digital Arcade..."
-COLOR 15: LOCATE 3, 2: PRINT STRING$(78, 196)
-COLOR 25: LOCATE 4, 2: PRINT "Commands"
-COLOR 18: LOCATE 13, 2: PRINT "T";: COLOR 2: PRINT "ower Trials";: COLOR 15: PRINT ".................. Smite all the creatures in your trials"
-COLOR 20: LOCATE 21, 2: PRINT "Esc";: COLOR 12: PRINT "................... press Esc to end the program"
+Color 31: Locate 2, 2: Print "This is my Digital Arcade..."
+Color 15: Locate 3, 2: Print String$(78, 196)
+Color 25: Locate 4, 2: Print "Commands"
+Color 18: Locate 13, 2: Print "T";: Color 2: Print "ower Trials";: Color 15: Print ".................. Smite all the creatures in your trials"
+Color 20: Locate 21, 2: Print "Esc";: Color 12: Print "................... press Esc to end the program"
 
-DO
-    K$ = INKEY$
-    K$ = UCASE$(K$)
-LOOP UNTIL K$ = "N" OR K$ = "T" OR K$ = "B" OR K$ = CHR$(27)
-_SNDPLAY h&
-IF K$ = "T" THEN GOTO TowerTrials:
-IF K$ = CHR$(27) THEN GOTO OPTIONS:
+Do
+    K$ = InKey$
+    K$ = UCase$(K$)
+Loop Until K$ = "N" Or K$ = "T" Or K$ = "B" Or K$ = Chr$(27)
+_SndPlay h&
+If K$ = "T" Then GoTo TowerTrials:
+If K$ = Chr$(27) Then GoTo OPTIONS:
 
 TowerTrials:
-CONST TRUE2 = 1
-CONST FALSE2 = 0
+Const TRUE2 = 1
+Const FALSE2 = 0
 
-CLS
+Cls
 ask = question
 
-IF ask = 1 THEN
-    SOUND 100, 18.2
-    SOUND 300, 18.2
-    SOUND 200, 18.2
-    SOUND 500, 18.5
-    SOUND 200, 20
-    SOUND 0, 18.2
-    SOUND 300, 6
-    SOUND 800, 18.5
-END IF
+If ask = 1 Then
+    Sound 100, 18.2
+    Sound 300, 18.2
+    Sound 200, 18.2
+    Sound 500, 18.5
+    Sound 200, 20
+    Sound 0, 18.2
+    Sound 300, 6
+    Sound 800, 18.5
+End If
 
 STARTALLOVER:
-COLOR 12, 0: PRINT TAB(23); "Welcome to  T O W E R  T R I A L S"
+Color 12, 0: Print Tab(23); "Welcome to  T O W E R  T R I A L S"
 
-COLOR 5: PRINT "Welcome to this game. From here you will solve your way through the game until  completion is reached... (Make sure that everything you type should be in CAPS)"
-COLOR 31, 1: PRINT "(WARNING: this game is very confusing and requires thought and patience. PLAYER DISGRESSION IS ADVIZED)"
-COLOR 10, 0: PRINT "Darn! I forgot my glasses in my other cloak. Can you tell me if you are a boy or a girl"
+Color 5: Print "Welcome to this game. From here you will solve your way through the game until  completion is reached... (Make sure that everything you type should be in CAPS)"
+Color 31, 1: Print "(WARNING: this game is very confusing and requires thought and patience. PLAYER DISGRESSION IS ADVIZED)"
+Color 10, 0: Print "Darn! I forgot my glasses in my other cloak. Can you tell me if you are a boy or a girl"
 
-DO
-    INPUT pASSWORD$
-    IF pASSWORD$ = "GIRL" THEN GOTO GIRL:
-    IF pASSWORD$ = "BOY" THEN GOTO BOY: ELSE PRINT "I don't understand..."
+Do
+    Input pASSWORD$
+    If pASSWORD$ = "GIRL" Then GoTo GIRL:
+    If pASSWORD$ = "BOY" Then GoTo BOY: Else Print "I don't understand..."
 
-LOOP UNTIL GETOUT = 1
+Loop Until GETOUT = 1
 
 BOY:
-PRINT "Alright! Let's venture yonder, champ!"
-GOTO FIRSTRIDDLE:
+Print "Alright! Let's venture yonder, champ!"
+GoTo FIRSTRIDDLE:
 
 GIRL:
-PRINT "Oh. Now I recognize you! Alright! Follow me, milady..."
+Print "Oh. Now I recognize you! Alright! Follow me, milady..."
 
 FIRSTRIDDLE:
-COLOR 4: PRINT "Okay, let's start with a mathematical riddle."
-COLOR 12: PRINT "If 2=6, 3=12, 4=20, what does 5 equal?"
-LET GETOUT = 0
-DO
-    INPUT pASSWORD$
-    IF pASSWORD$ = "30" THEN GETOUT = 1: PRINT "Good thinking! You're just the kind of person I'm looking for!" ELSE PRINT "Try again please..."
-LOOP UNTIL GETOUT = 1
-COLOR 2: PRINT "Let's move on..."
+Color 4: Print "Okay, let's start with a mathematical riddle."
+Color 12: Print "If 2=6, 3=12, 4=20, what does 5 equal?"
+Let GETOUT = 0
+Do
+    Input pASSWORD$
+    If pASSWORD$ = "30" Then GETOUT = 1: Print "Good thinking! You're just the kind of person I'm looking for!" Else Print "Try again please..."
+Loop Until GETOUT = 1
+Color 2: Print "Let's move on..."
 
-COLOR 6: PRINT "Let's go on our way through town to the tower."
-PRINT "There is a gate to the place we are visiting and the guardsman asks for a passcode to get in."
+Color 6: Print "Let's go on our way through town to the tower."
+Print "There is a gate to the place we are visiting and the guardsman asks for a passcode to get in."
 
-COLOR 3: PRINT "The guardsman says... 'What is the answer to 2(5+7) 1 + 2 x 4'"
+Color 3: Print "The guardsman says... 'What is the answer to 2(5+7) 1 + 2 x 4'"
 
-LET GETOUT = 0
-DO
-    INPUT pASSWORD$
-    IF pASSWORD$ = "30" THEN GETOUT = 1: PRINT "You shall pass, brilliant one." ELSE PRINT "Please try again, your answer is incorrect."
-LOOP UNTIL GETOUT = 1
+Let GETOUT = 0
+Do
+    Input pASSWORD$
+    If pASSWORD$ = "30" Then GETOUT = 1: Print "You shall pass, brilliant one." Else Print "Please try again, your answer is incorrect."
+Loop Until GETOUT = 1
 
-COLOR 8: PRINT "This is a palace in which there are 3 floors. Each floor contains a trial. But, only on the roof, will be your final trial and crowning moment."
+Color 8: Print "This is a palace in which there are 3 floors. Each floor contains a trial. But, only on the roof, will be your final trial and crowning moment."
 
 FIRSTTRIAL:
-COLOR 4: PRINT "HERE IS YOUR FIRST TRIAL!!! (An experienced witch flies down with 500 health points.Your magic deals 25% damage of what the witch already has and your punch deals 100 health points. Your objctive is to slay the witch by choosing either MAGIC or PUNCH to attack)"
+Color 4: Print "HERE IS YOUR FIRST TRIAL!!! (An experienced witch flies down with 500 health points.Your magic deals 25% damage of what the witch already has and your punch deals 100 health points. Your objctive is to slay the witch by choosing either MAGIC or PUNCH to attack)"
 
-LET GETOUT = 0
-LET Life = 500
-LET Witch = 500
+Let GETOUT = 0
+Let Life = 500
+Let Witch = 500
 
-COLOR 6:
-DO
-    INPUT pASSWORD$
-    IF pASSWORD$ = "MAGIC" THEN
+Color 6:
+Do
+    Input pASSWORD$
+    If pASSWORD$ = "MAGIC" Then
         Witch = Witch * .25
         Life = Life - 110
 
-        COLOR 2: PRINT "You did 25% damage of what the witch already has! You got hit by the witch's magical staff's WACK!"
-        PRINT "You currntly have"; Life
-        PRINT "life points."
-        PRINT "The witch still has"; Witch
-        PRINT "life points. Make another move. Your options are MAGIC, or PUNCH."
+        Color 2: Print "You did 25% damage of what the witch already has! You got hit by the witch's magical staff's WACK!"
+        Print "You currntly have"; Life
+        Print "life points."
+        Print "The witch still has"; Witch
+        Print "life points. Make another move. Your options are MAGIC, or PUNCH."
 
-    ELSE PRINT "You punched 100 damage! You got hit by the witch's magical staff's flame bolt."
+    Else Print "You punched 100 damage! You got hit by the witch's magical staff's flame bolt."
         Life = Life - 110
         Witch = Witch - 100
 
-        PRINT "You currently have"; Life
-        PRINT "life points."
-        PRINT "The witch still has"; Witch
-        PRINT "life points. Make another move. Your options are MAGIC, or PUNCH."
+        Print "You currently have"; Life
+        Print "life points."
+        Print "The witch still has"; Witch
+        Print "life points. Make another move. Your options are MAGIC, or PUNCH."
 
-    END IF
-    IF Witch <= 0 OR Life <= 0 THEN GETOUT = 1
-LOOP UNTIL GETOUT = 1
-IF Witch <= 0 THEN PRINT "You defeated the witch!"
-IF Life <= 0 THEN PRINT "You got annihilated by the witch and have been slain."
+    End If
+    If Witch <= 0 Or Life <= 0 Then GETOUT = 1
+Loop Until GETOUT = 1
+If Witch <= 0 Then Print "You defeated the witch!"
+If Life <= 0 Then Print "You got annihilated by the witch and have been slain."
 
 Decision = StillWantsToPlay2
-IF Life <= 0 AND Decision = TRUE2 THEN GOTO STARTALLOVER:
-IF Decision = FALSE2 THEN END
+If Life <= 0 And Decision = TRUE2 Then GoTo STARTALLOVER:
+If Decision = FALSE2 Then End
 
-COLOR 0, 0
-COLOR 2: PRINT "Hoo-ray!!! You have defeated the witch. It's time to go to to the next floor for trial 2."
-COLOR 6: PRINT "(As you step up to the second trial, you see a minotaur inside a cage) Here is your second trial... Defeat the MINOTAUR!!!"
-COLOR 14: PRINT "(You have earned a new power and your magic has improved! Your options are MAGIC: does 50% damage of what the minotaur currently has; and SWORD that does 300 damage to the minotaur health points. YOU BOTH HAVE 1,000 HEALTH POINTS"
+Color 0, 0
+Color 2: Print "Hoo-ray!!! You have defeated the witch. It's time to go to to the next floor for trial 2."
+Color 6: Print "(As you step up to the second trial, you see a minotaur inside a cage) Here is your second trial... Defeat the MINOTAUR!!!"
+Color 14: Print "(You have earned a new power and your magic has improved! Your options are MAGIC: does 50% damage of what the minotaur currently has; and SWORD that does 300 damage to the minotaur health points. YOU BOTH HAVE 1,000 HEALTH POINTS"
 
-LET GETOUT = 0
-LET Life = 1000
-LET Minotaur = 1000
+Let GETOUT = 0
+Let Life = 1000
+Let Minotaur = 1000
 
-COLOR 10:
-DO
-    INPUT pASSWORD$
-    IF pASSWORD$ = "MAGIC" THEN
+Color 10:
+Do
+    Input pASSWORD$
+    If pASSWORD$ = "MAGIC" Then
         Minotaur = Minotaur * .50
         Life = Life - 230
 
-        PRINT "You did 50% damage! You got hit by the minotaur's RAM"
-        PRINT "You currently have"; Life
-        PRINT "life points."
-        PRINT "The minotaur still has"; Minotaur
-        PRINT "life points. Make another move. Your options are MAGIC, or SWORD."
+        Print "You did 50% damage! You got hit by the minotaur's RAM"
+        Print "You currently have"; Life
+        Print "life points."
+        Print "The minotaur still has"; Minotaur
+        Print "life points. Make another move. Your options are MAGIC, or SWORD."
 
-    ELSE
-        PRINT "You hacked 300 damage! You got hit by the minotaur's GIGA IMPACT!"
+    Else
+        Print "You hacked 300 damage! You got hit by the minotaur's GIGA IMPACT!"
         Life = Life - 230
         Minotaur = Minotaur - 300
 
-        PRINT "You currently have"; Life
-        PRINT "life points."
-        PRINT "The minotaur still has"; Minotaur
-        PRINT "life points. Make another move. Your options are MAGIC, or SWORD."
+        Print "You currently have"; Life
+        Print "life points."
+        Print "The minotaur still has"; Minotaur
+        Print "life points. Make another move. Your options are MAGIC, or SWORD."
 
-    END IF
-    IF Minotaur <= 0 OR Life <= 0 THEN GETOUT = 1
-LOOP UNTIL GETOUT = 1
+    End If
+    If Minotaur <= 0 Or Life <= 0 Then GETOUT = 1
+Loop Until GETOUT = 1
 
-COLOR 20, 7:
-IF Minotaur <= 0 THEN PRINT "You defeated the minotaur!"
-IF Life <= 0 THEN PRINT "You got annihilated by the minotaur and have been slain."
+Color 20, 7:
+If Minotaur <= 0 Then Print "You defeated the minotaur!"
+If Life <= 0 Then Print "You got annihilated by the minotaur and have been slain."
 
 Decision = StillWantsToPlay2
-IF Life <= 0 AND Decision = TRUE2 THEN GOTO STARTALLOVER:
-IF Decision = FALSE2 THEN GOTO OPTIONS:
+If Life <= 0 And Decision = TRUE2 Then GoTo STARTALLOVER:
+If Decision = FALSE2 Then GoTo OPTIONS:
 
-COLOR 3, 0: PRINT "We are heading to the third floor for your final trial. How do you feel?"
-INPUT pASSWORD$
-IF pASSWORD$ = "GOOD" THEN PRINT "It's all good, just remember what you have learned." ELSE PRINT "It's all good, just remember what you have learned."
+Color 3, 0: Print "We are heading to the third floor for your final trial. How do you feel?"
+Input pASSWORD$
+If pASSWORD$ = "GOOD" Then Print "It's all good, just remember what you have learned." Else Print "It's all good, just remember what you have learned."
 
-PRINT "We are heading towards the third floor now."
+Print "We are heading towards the third floor now."
 
-COLOR 15: PRINT "(The dragon awits your arrival) It says: I SHALL DISINTIGRATE YOU!!!"
+Color 15: Print "(The dragon awits your arrival) It says: I SHALL DISINTIGRATE YOU!!!"
 
-LET GETOUT = 0
-LET Life = 10000
-LET Dragon = 10000
+Let GETOUT = 0
+Let Life = 10000
+Let Dragon = 10000
 
-PRINT "Make your first move. Your options are MAGIC, or SWORD."
-COLOR 10:
-DO
-    INPUT pASSWORD$
-    IF pASSWORD$ = "MAGIC" THEN
+Print "Make your first move. Your options are MAGIC, or SWORD."
+Color 10:
+Do
+    Input pASSWORD$
+    If pASSWORD$ = "MAGIC" Then
         Dragon = Minotaur * .50
         Life = Life - 1000
 
-        PRINT "You did 50% damage! You got hit by the dragon's DRILL RUN!!!"
-        PRINT "You currently have"; Life
-        PRINT "life points."
-        PRINT "The dragon still has"; Dragon
-        PRINT "life points. Make another move. Your options are MAGIC, or SWORD."
+        Print "You did 50% damage! You got hit by the dragon's DRILL RUN!!!"
+        Print "You currently have"; Life
+        Print "life points."
+        Print "The dragon still has"; Dragon
+        Print "life points. Make another move. Your options are MAGIC, or SWORD."
 
-    ELSE
-        PRINT "You hacked 300 damage! You got hit by the dragon's FLARE CRASH!!!"
+    Else
+        Print "You hacked 300 damage! You got hit by the dragon's FLARE CRASH!!!"
         Life = Life - 1000
         Dragon = Dragon - 300
-        PRINT "You currently have"; Life
-        PRINT "life points."
-        PRINT "The dragon still has"; Dragon
-        PRINT "life points. Make another move. Your options are MAGIC, or SWORD."
+        Print "You currently have"; Life
+        Print "life points."
+        Print "The dragon still has"; Dragon
+        Print "life points. Make another move. Your options are MAGIC, or SWORD."
 
-    END IF
-    IF Dragon <= 0 OR Life <= 0 THEN GETOUT = 1
-LOOP UNTIL GETOUT = 1
-COLOR 20, 7:
-IF Dragon <= 0 THEN PRINT "You defeated the dragon!"
-COLOR 12, 0: PRINT TAB(23); "C O N G R A D U L A T I O N S ! ! ! You have won T O W E R  T R I A L S"
-IF Life <= 0 THEN PRINT "You got annihilated by the dragon and have been slain. You shall start over..."
+    End If
+    If Dragon <= 0 Or Life <= 0 Then GETOUT = 1
+Loop Until GETOUT = 1
+Color 20, 7:
+If Dragon <= 0 Then Print "You defeated the dragon!"
+Color 12, 0: Print Tab(23); "C O N G R A D U L A T I O N S ! ! ! You have won T O W E R  T R I A L S"
+If Life <= 0 Then Print "You got annihilated by the dragon and have been slain. You shall start over..."
 
 Decision = StillWantsToPlay2
-IF Life <= 0 AND Decision = TRUE2 THEN GOTO STARTALLOVER:
-IF Decision = FALSE2 THEN GOTO OPTIONS:
+If Life <= 0 And Decision = TRUE2 Then GoTo STARTALLOVER:
+If Decision = FALSE2 Then GoTo OPTIONS:
 
 
-COLOR 5: PRINT "(Word qickly spread of the victor of all three trials at the tower. It has never been done by any other challenger, wizard, nor even royal blood had completed the challenge.) This is your ceremony, on the roof of the tower. As promised"
-COLOR 8: PRINT "You hear the king say: ... and here you are, your medal to show that you are the first in all the kingdom to complete the legendary challenge and I hereby claim you as CHAMPION of our kingd---"
-COLOR 4: PRINT "(A rumble is felt on the ground and the distance you see a huge giant, as tall as the tower, coming to crash your party)"
-COLOR 5: PRINT "It is only you who can save us all from the marauding giant. Your SWORD has been upgraded to FLAMING SWORD: does 1,000 damage; MAGIC: does 50% damage of what the marauding giant currently has. You both have 10,000 life points."
-COLOR 14: PRINT "Your options are MAGIC, or FLAMING SWORD"
+Color 5: Print "(Word qickly spread of the victor of all three trials at the tower. It has never been done by any other challenger, wizard, nor even royal blood had completed the challenge.) This is your ceremony, on the roof of the tower. As promised"
+Color 8: Print "You hear the king say: ... and here you are, your medal to show that you are the first in all the kingdom to complete the legendary challenge and I hereby claim you as CHAMPION of our kingd---"
+Color 4: Print "(A rumble is felt on the ground and the distance you see a huge giant, as tall as the tower, coming to crash your party)"
+Color 5: Print "It is only you who can save us all from the marauding giant. Your SWORD has been upgraded to FLAMING SWORD: does 1,000 damage; MAGIC: does 50% damage of what the marauding giant currently has. You both have 10,000 life points."
+Color 14: Print "Your options are MAGIC, or FLAMING SWORD"
 
-LET GETOUT = 0
-LET Life = 10000
-LET giant = 10000
+Let GETOUT = 0
+Let Life = 10000
+Let giant = 10000
 
-COLOR 1:
-DO
-    INPUT pASSWORD$
-    IF pASSWORD$ = "MAGIC" THEN
+Color 1:
+Do
+    Input pASSWORD$
+    If pASSWORD$ = "MAGIC" Then
         giant = giant * .50
         Life = Life - 1500
 
-        PRINT "You did 50% damage! You got hit by the marauding giant's CRASH!"
-        PRINT "You currently have"; Life
-        PRINT "life points."
-        PRINT "The marauding giant still has"; giant
-        PRINT "life points. Make another move. Your options are MAGIC, or SWORD."
+        Print "You did 50% damage! You got hit by the marauding giant's CRASH!"
+        Print "You currently have"; Life
+        Print "life points."
+        Print "The marauding giant still has"; giant
+        Print "life points. Make another move. Your options are MAGIC, or SWORD."
 
-        COLOR 20, 7: ELSE PRINT "You hacked 1000 damage! You got hit by the marauding giant's HEAD SMASH!"
+        Color 20, 7: Else Print "You hacked 1000 damage! You got hit by the marauding giant's HEAD SMASH!"
         Life = Life - 1500
         giant = giant - 1000
 
-        PRINT "You currently have"; Life
-        PRINT "life points."
-        PRINT "The marauding giant still has"; giant
-        PRINT "life points remaining. Make another move. Your options are MAGIC, or SWORD."
+        Print "You currently have"; Life
+        Print "life points."
+        Print "The marauding giant still has"; giant
+        Print "life points remaining. Make another move. Your options are MAGIC, or SWORD."
 
-    END IF
-    IF giant <= 0 OR Life <= 0 THEN GETOUT = 1
-LOOP UNTIL GETOUT = 1
-COLOR 4:
-IF giant <= 0 THEN PRINT "You defeated the marauding giant in front of everybody! Good work, champion!"
-IF Life <= 0 THEN PRINT "You got annihilated by the marauding giant and have been slain. You shall restart at the first trial..."
-IF Life <= 0 THEN GOTO FIRSTTRIAL:
+    End If
+    If giant <= 0 Or Life <= 0 Then GETOUT = 1
+Loop Until GETOUT = 1
+Color 4:
+If giant <= 0 Then Print "You defeated the marauding giant in front of everybody! Good work, champion!"
+If Life <= 0 Then Print "You got annihilated by the marauding giant and have been slain. You shall restart at the first trial..."
+If Life <= 0 Then GoTo FIRSTTRIAL:
 
-COLOR 17, 15: PRINT "You have won Tower Trials! Please play again soon."
+Color 17, 15: Print "You have won Tower Trials! Please play again soon."
 
-COLOR 15, 0: PRINT "CREDITS"
-COLOR 7: PRINT "Helped by Gregory Davidson and Albert Davidson. Everything else: Ethan Davidson."
-
-
-COLOR 10, 0: PRINT "THE END... or to be continued"
-
-END
-
-FUNCTION question ()
-COLOR 9, 0: PRINT "Do you want Tower Trials Song to begin the game? (Y/N)"
-DO
-    a$ = INKEY$
-LOOP UNTIL a$ <> ""
-IF UCASE$(a$) = "Y" THEN question = TRUE2 ELSE question = FALSE2
-END FUNCTION
+Color 15, 0: Print "CREDITS"
+Color 7: Print "Helped by Gregory Davidson and Albert Davidson. Everything else: Ethan Davidson."
 
 
-FUNCTION Clock$
-hour$ = LEFT$(TIME$, 2): H% = VAL(hour$)
-min$ = MID$(TIME$, 3, 3)
-IF H% >= 12 THEN ampm$ = " PM" ELSE ampm$ = " AM"
-IF H% > 12 THEN
-    IF H% - 12 < 10 THEN hour$ = STR$(H% - 12) ELSE hour$ = LTRIM$(STR$(H% - 12))
-ELSEIF H% = 0 THEN hour$ = "12" ' midnight hour
-ELSE: IF H% < 10 THEN hour$ = STR$(H%) ' eliminate leading zeros
-END IF
-Clock$ = hour$ + min$ + ampm$
-END FUNCTION
+Color 10, 0: Print "THE END... or to be continued"
+
+End
+
+Function question ()
+    Color 9, 0: Print "Do you want Tower Trials Song to begin the game? (Y/N)"
+    Do
+        a$ = InKey$
+    Loop Until a$ <> ""
+    If UCase$(a$) = "Y" Then question = TRUE2 Else question = FALSE2
+End Function
+
+
+Function Clock$
+    hour$ = Left$(Time$, 2): H% = Val(hour$)
+    min$ = Mid$(Time$, 3, 3)
+    If H% >= 12 Then ampm$ = " PM" Else ampm$ = " AM"
+    If H% > 12 Then
+        If H% - 12 < 10 Then hour$ = Str$(H% - 12) Else hour$ = LTrim$(Str$(H% - 12))
+    ElseIf H% = 0 Then hour$ = "12" ' midnight hour
+    Else: If H% < 10 Then hour$ = Str$(H%) ' eliminate leading zeros
+    End If
+    Clock$ = hour$ + min$ + ampm$
+End Function
 
 
