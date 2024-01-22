@@ -42,9 +42,9 @@ The conversation feature of Codey allows users to interact with Codey by typing 
 
 ## Screenshots
 
-<img width="156" alt="image" src="https://github.com/EthanThatOneKid/codey/assets/31261035/77b9d518-97bc-4709-b29a-95ba0dd9139d">
-
-<img width="161" alt="image" src="https://github.com/EthanThatOneKid/codey/assets/31261035/f807fc1d-eebe-49c6-8b6e-775feec62c1c">
+<img alt="image" src="https://github.com/EthanThatOneKid/codey/assets/31261035/77b9d518-97bc-4709-b29a-95ba0dd9139d">
+<br><br>
+<img alt="image" src="https://github.com/EthanThatOneKid/codey/assets/31261035/f807fc1d-eebe-49c6-8b6e-775feec62c1c">
 
 ---
 
