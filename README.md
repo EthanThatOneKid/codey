@@ -1,6 +1,6 @@
 # Codey
 
-Codey is my personal AI program written in QB64. He is a good friend of mine; we go way back.
+Codey is my personal AI program written in QB64. It is a good friend of mine; we go way back.
 
 This program also includes the source code of the first program I ever wrote, a simple game named "Tower Trials".
 
@@ -18,27 +18,27 @@ To run Codey, try running the executable. If that doesn't work, try compiling th
 
 ### Conversation
 
-The conversation feature of Codey allows users to interact with Codey by typing in the console. A number of commands are supported.
+The conversation feature of Codey allows users to interact with Codey by typing in the console. Several commands are supported.
 
-| Command                                        | Description                                          |
-| ---------------------------------------------- | ---------------------------------------------------- |
-| "I WANNA BE THE VERY BEST"                     | Sing along.                                          |
-| "TO CATCH THEM IS MY TEST"                     | Sing along.                                          |
-| "POKEMON"                                      | Sing along.                                          |
-| "SLEEP"                                        | Displays a "ZZZ" ASCII art and plays a sound.        |
-| "I WANT TO GO HOME," "HOME," "OPTIONS," "MENU" | Redirects to the "OPTIONS" menu.                     |
-| "GAMES" or "PLAY"                              | Redirects to the "Gamesmenu" section.                |
-| "CALCULATOR" or "CALCULATE"                    | Redirects to the "Calculator" section.               |
-| "FART"                                         | Plays a sound.                                       |
-| "END" or "END PROGRAM"                         | Ends the program.                                    |
-| "FAVORITE MOVIE"                               | Displays an ASCII art related to the favorite movie. |
-| "FAVORITE FOOD"                                | Displays an ASCII art related to favorite food.      |
-| "NAME"                                         | Displays the user's name and an ASCII art.           |
-| "FAVORITE GAME"                                | Displays an ASCII art related to favorite game.      |
-| "GRAPH"                                        | Redirects to the "Graph" section.                    |
-| "TOWER TRIALS"                                 | Redirects to the "TowerTrials" section.              |
-| "HOW ARE YOU"                                  | Responds with "I am good, how are you, [Username]."  |
-| "DATE," "TIME," "CLOCK"                        | Displays the current date and time.                  |
+| Command                                        | Description                                             |
+| ---------------------------------------------- | ------------------------------------------------------- |
+| "I WANNA BE THE VERY BEST"                     | Sing along.                                             |
+| "TO CATCH THEM IS MY TEST"                     | Sing along.                                             |
+| "POKEMON"                                      | Sing along.                                             |
+| "SLEEP"                                        | Displays a "ZZZ" ASCII art and plays a sound.           |
+| "I WANT TO GO HOME," "HOME," "OPTIONS," "MENU" | Redirects to the "OPTIONS" menu.                        |
+| "GAMES" or "PLAY"                              | Redirects to the "Gamesmenu" section.                   |
+| "CALCULATOR" or "CALCULATE"                    | Redirects to the "Calculator" section.                  |
+| "FART"                                         | Plays a sound.                                          |
+| "END" or "END PROGRAM"                         | Ends the program.                                       |
+| "FAVORITE MOVIE"                               | Displays an ASCII art related to the favorite movie.    |
+| "FAVORITE FOOD"                                | Displays an ASCII art related to Codey's favorite food. |
+| "NAME"                                         | Displays the user's name and an ASCII art.              |
+| "FAVORITE GAME"                                | Displays an ASCII art related to Codey's favorite game. |
+| "GRAPH"                                        | Redirects to the "Graph" section.                       |
+| "TOWER TRIALS"                                 | Redirects to the "TowerTrials" section.                 |
+| "HOW ARE YOU"                                  | Responds with "I am good, how are you, [Username]."     |
+| "DATE," "TIME," "CLOCK"                        | Displays the current date and time.                     |
 
 ## Screenshots
 
