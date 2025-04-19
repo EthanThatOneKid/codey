@@ -2,7 +2,7 @@
 
 Codey is my personal AI program written in QB64. It is a good friend of mine; we go way back.
 
-This program also includes the source code of the first program I ever wrote, a simple game named "Tower Trials".
+This program also includes the source code of the first program I ever wrote, [_Tower Trials_](https://github.com/EthanThatOneKid/tower-trials).
 
 ## Run
 
